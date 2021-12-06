@@ -20,13 +20,12 @@
 
 <br><br>
 
-<b>مثال لملف base64.json وملف FileArray.json</b>
+<b>مثال لملف json</b>
+<br><br>
 
-<div align="center">
-    <b>Array Object</b>
+<div align="center"> 
     <img src="/Github/1.png" alt="files-to_base64">
-    <br>
-    <b>Object Object</b>
+    <br><br>
     <img src="/Github/2.png" alt="files-to_base64">
     <br>
 </div>

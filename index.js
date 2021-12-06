@@ -12,10 +12,8 @@ export default async function File_To_Base64() {
     try {
 
         const __dirname = path.resolve();
-        fs.mkdirSync(__dirname + "/Output", { recursive: true });
-        fs.writeJSONSync(__dirname + "/Output/base64.json", {});
-        fs.writeJSONSync(__dirname + "/Output/FileArray.json", []);
-        
+        fs.mkdirSync(__dirname + "/Files-Json", { recursive: true });
+
         let Files = fs.readdirSync(__dirname)
         let extensions = [".mp3",".mp4",".jpg",".jpeg",".png",".gif",".txt",".pdf",".svg",".webp"]
         for (let lop of Files) {
@@ -23,24 +21,19 @@ export default async function File_To_Base64() {
             if (extensions.some(fltr => lop.includes(fltr))) {
         
                 let Base64 = fs.readFileSync(__dirname + `/${lop}`).toString('base64');
-                let Base64json = fs.readJsonSync(__dirname + '/Output/base64.json');
-                let FileArrayjson = fs.readJsonSync(__dirname + '/Output/FileArray.json');
+                let FileName = lop.split('.',1)[0]
                 let OPJ = {
                     FileName:lop,
                     Base64:Base64
                 }
-                FileArrayjson.push(OPJ)
-                fs.writeJsonSync(__dirname + '/Output/FileArray.json', FileArrayjson, {spaces:'\t'});
-                fs.writeJsonSync(__dirname + '/Output/base64.json', Object.assign({}, Base64json, {[lop]:{"base64":Base64}}), {spaces:'\t'});
-                console.log(`${lop} converted to Base64 `);
+                fs.writeJsonSync(__dirname + `/Files-Json/${FileName}.json`, OPJ, {spaces:'\t'});
+                console.log(`${lop} converted to ${FileName}.json`);
                 
             }
 
         }
 
-        console.log('\n\n\nFiles has been added to base64.json');
-
-        return fs.readJsonSync(__dirname + '/Output/base64.json');
+        console.log('\n\nDone...');
         
     } catch (error) {
 
