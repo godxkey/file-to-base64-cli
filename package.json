@@ -1,0 +1,42 @@
+{
+  "name": "file-to-base64-cli",
+  "version": "1.0.0",
+  "description": "File [ mp3 , mp4 , jpg , jpeg , png , gif , txt , pdf , svg , webp ] to Base64",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "files-to-base64": "index.js"
+  },
+  "author": "rn0x",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "path": "^0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rn0x/file-to-base64-cli.git"
+  },
+  "keywords": [
+    "image to base64",
+    "auduo to base64",
+    "png to base64",
+    "gif to base64",
+    "mp3 to base64",
+    "mp4 to base64",
+    "file to base64",
+    "file to base64 cli",
+    "txt to base64",
+    "jpg to base64",
+    "jpeg to base64 cli",
+    "pdf to base64"
+  ],
+  "bugs": {
+    "url": "https://github.com/rn0x/file-to-base64-cli/issues"
+  },
+  "homepage": "https://github.com/rn0x/file-to-base64-cli#readme"
+}
