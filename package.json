@@ -1,6 +1,6 @@
 {
   "name": "file-to-base64-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "File [ mp3 , mp4 , jpg , jpeg , png , gif , txt , pdf , svg , webp ] to Base64",
   "main": "index.js",
   "type": "module",
